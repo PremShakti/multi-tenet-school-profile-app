@@ -6,7 +6,7 @@ export default async function HomePage() {
   const host = headerList.get("host") || "";
   const subdomain = host.split(".")[0];
 
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL|| "https://multi-tenet-school-profile-app.vercel.app";
 
   const res = await fetch(`${baseUrl}/api/school-info?school=${subdomain}`, {
     cache: "no-store",
